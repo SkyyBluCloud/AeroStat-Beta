@@ -9,12 +9,13 @@ namespace AeroStat_Beta
     public class Traffic
     {
         public DateTime entryDate { get; set; }
+        public Shift shift { get; set; }
         public int id { get; set; }
         public int certifierID { get; set; } = 0;
-        public string? ppr { get; set; }
-        public string opInitials { get; set; }
+        public PPR? ppr { get; set; }
+        public User user { get; set; }
         public string callsign { get; set; }
-        public int number { get; set; }
+        public int number { get; set; } = 1;
         public string acType { get; set; }
         public string status { get; set; }
         public string flightRule { get; set; }

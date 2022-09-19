@@ -28,6 +28,7 @@ namespace AeroStat_Beta
         public string destination { get; set; }
         public string spot { get; set; }
         public string fuel { get; set; }
+        public List<int> services { get; set; }
         public string remarks { get; set; }
         public string paxUnit { get; set; }
         public int paxOn { get; set; }
