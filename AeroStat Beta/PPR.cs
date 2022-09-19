@@ -41,5 +41,6 @@ namespace AeroStat_Beta
         public string pocContact { get; set; }
         public PPRStatus status { get; set; } = PPRStatus.Approved;
         public string? dvCode { get; set; } = null;
+        public List<Traffic>? trafficStrips { get; set; }
     }
 }

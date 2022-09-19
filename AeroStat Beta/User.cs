@@ -9,6 +9,12 @@ namespace AeroStat_Beta
         public string lastName { get; set; }
         public string firstName { get; set; }
         public string unit { get; set; }
+
+        internal User getCurrentUser()
+        {
+            throw new NotImplementedException();
+        }
+
         public long rankID { get; set; }
         public bool approved { get; set; }
         public DateTime lastLogin { get; set; }

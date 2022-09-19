@@ -10,27 +10,31 @@ namespace AeroStat_Beta
             LTD,
             CLSD
         }
-        public enum Type
-        { 
-            MISC,
-            RWY,
-            TWY,
-            APRON,
-            SVCRD,
-            SPOT,
-            MISC_ACFT
+        public enum DimUnit
+        {
+            IN,
+            FT,
+            M,
+            CM,
+            KM
+        }
+        public enum MassUnit
+        {
+            LBS,
+            KIPS,
+            TONS,
+            KG
         }
         public long id { get; set; }
         public string sfcName { get; set; }
-        public ISurface.Type sfcType { get; set; }
         public ISurface.Status status { get; set; }
-        public string dimUnit { get; set; }
-        public string massUnit { get; set; }
+        public DimUnit dimUnit { get; set; }
+        public MassUnit massUnit { get; set; }
         public long length { get; set; }
         public long width { get; set; }
         public long pcn { get; set; }
         public string pavementType { get; set; }
         public long maxWeight { get; set; }
-        public string equipment { get; set; }
+        public string? remarks { get; set; }
     }
 }
