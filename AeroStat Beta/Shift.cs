@@ -3,14 +3,14 @@ namespace AeroStat_Beta
     public class Shift
     {
         public long shiftID { get; set; }
-        public bool closed { get; set; }
+        public bool closed { get; set; } = false;
         public long certifierID { get; set; } = 0;
         public string shiftTitle { get; set; }
         public DateTime shiftStart { get; set; }
         public DateTime shiftEnd { get; set; }
         public User superLead { get; set; }
         public List<User> amoc { get; set; }
-        public string remarks { get; set; }
+        public string? remarks { get; set; }
         public string rwy { get; set; }
         public string rsc { get; set; }
         public string rcr { get; set; }
@@ -20,6 +20,6 @@ namespace AeroStat_Beta
         public string dasr { get; set; }
         public string ils { get; set; }
         public string aarf { get; set; }
-        public string reviewerComments { get; set; }
+        public string? reviewerComments { get; set; }
     }
 }

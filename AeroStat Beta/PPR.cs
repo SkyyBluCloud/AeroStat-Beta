@@ -16,7 +16,7 @@ namespace AeroStat_Beta
             Cancelled
         }
 
-        public int id { get; set; }
+        public long id { get; set; }
         public string callsign { get; set; }
         public string ppr { get; set; }
         public DateTime issueDate { get; set; }
@@ -28,14 +28,14 @@ namespace AeroStat_Beta
         public string destination { get; set; }
         public string spot { get; set; }
         public string fuel { get; set; }
-        public List<int> services { get; set; }
+        public List<long> services { get; set; }
         public string remarks { get; set; }
         public string paxUnit { get; set; }
-        public int paxOn { get; set; }
-        public int paxOff { get; set; }
+        public long paxOn { get; set; }
+        public long paxOff { get; set; }
         public string cargoUnit { get; set; }
-        public int cargoOn { get; set; }
-        public int cargoOff { get; set; }
+        public long cargoOn { get; set; }
+        public long cargoOff { get; set; }
         public string pocName { get; set; }
         public string pocUnit { get; set; }
         public string pocContact { get; set; }

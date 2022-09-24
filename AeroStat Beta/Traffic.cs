@@ -8,14 +8,20 @@ namespace AeroStat_Beta
 {
     public class Traffic
     {
+        public enum Direction
+        {
+            IN,
+            OUT,
+            INOUT
+        }
         public DateTime entryDate { get; set; }
         public Shift shift { get; set; }
-        public int id { get; set; }
-        public int certifierID { get; set; } = 0;
+        public long id { get; set; }
+        public long certifierID { get; set; } = 0;
         public PPR? ppr { get; set; }
         public User user { get; set; }
         public string callsign { get; set; }
-        public int number { get; set; } = 1;
+        public long number { get; set; } = 1;
         public string acType { get; set; }
         public string status { get; set; }
         public string flightRule { get; set; }
@@ -29,9 +35,9 @@ namespace AeroStat_Beta
         public TimeOnly atd { get; set; }
         public TimeOnly ata { get; set; }
         public string? spot { get; set; }
-        public int altitude { get; set; }
+        public long altitude { get; set; }
         public string? tail { get; set; }
-        public int rwy { get; set; }
+        public long rwy { get; set; }
         public string remarks { get; set; }
 
 

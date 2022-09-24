@@ -6,5 +6,11 @@ namespace AeroStat_Beta
         {
             InitializeComponent();
         }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserDashboardForm frmUserDashboard = new();
+            frmUserDashboard.ShowDialog();
+        }
     }
 }

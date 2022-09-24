@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace AeroStat_Beta
 {
-    public partial class frmTrafficLog : Form
+    public partial class frmPPREntry : Form
     {
-        public frmTrafficLog()
+        public frmPPREntry()
         {
             InitializeComponent();
-        }
-
-        private void frmTrafficLog_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

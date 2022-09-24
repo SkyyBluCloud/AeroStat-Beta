@@ -1,6 +1,6 @@
 namespace AeroStat_Beta
 {
-    internal interface ISurface
+    public interface ISurface
     {
         public enum Status
         {
@@ -30,11 +30,11 @@ namespace AeroStat_Beta
         public ISurface.Status status { get; set; }
         public DimUnit dimUnit { get; set; }
         public MassUnit massUnit { get; set; }
-        public long length { get; set; }
-        public long width { get; set; }
-        public long pcn { get; set; }
-        public string pavementType { get; set; }
-        public long maxWeight { get; set; }
+        public long? length { get; set; }
+        public long? width { get; set; }
+        public long? pcn { get; set; }
+        public string? pavementType { get; set; }
+        public long? maxWeight { get; set; }
         public string? remarks { get; set; }
     }
 }

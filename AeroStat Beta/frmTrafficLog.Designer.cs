@@ -28,81 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstPPR = new System.Windows.Forms.ListBox();
-            this.lstArrivals = new System.Windows.Forms.ListBox();
-            this.lstOnStation = new System.Windows.Forms.ListBox();
-            this.lstDepartures = new System.Windows.Forms.ListBox();
-            this.lstLocal = new System.Windows.Forms.ListBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // lstPPR
+            // listBox1
             // 
-            this.lstPPR.FormattingEnabled = true;
-            this.lstPPR.ItemHeight = 15;
-            this.lstPPR.Location = new System.Drawing.Point(74, 79);
-            this.lstPPR.Name = "lstPPR";
-            this.lstPPR.Size = new System.Drawing.Size(502, 214);
-            this.lstPPR.TabIndex = 0;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(68, 261);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(328, 184);
+            this.listBox1.TabIndex = 0;
             // 
-            // lstArrivals
+            // listBox2
             // 
-            this.lstArrivals.FormattingEnabled = true;
-            this.lstArrivals.ItemHeight = 15;
-            this.lstArrivals.Location = new System.Drawing.Point(74, 338);
-            this.lstArrivals.Name = "lstArrivals";
-            this.lstArrivals.Size = new System.Drawing.Size(502, 124);
-            this.lstArrivals.TabIndex = 1;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 15;
+            this.listBox2.Location = new System.Drawing.Point(402, 261);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(324, 184);
+            this.listBox2.TabIndex = 1;
             // 
-            // lstOnStation
+            // listBox3
             // 
-            this.lstOnStation.FormattingEnabled = true;
-            this.lstOnStation.ItemHeight = 15;
-            this.lstOnStation.Location = new System.Drawing.Point(782, 79);
-            this.lstOnStation.Name = "lstOnStation";
-            this.lstOnStation.Size = new System.Drawing.Size(356, 199);
-            this.lstOnStation.TabIndex = 2;
-            // 
-            // lstDepartures
-            // 
-            this.lstDepartures.FormattingEnabled = true;
-            this.lstDepartures.ItemHeight = 15;
-            this.lstDepartures.Location = new System.Drawing.Point(74, 468);
-            this.lstDepartures.Name = "lstDepartures";
-            this.lstDepartures.Size = new System.Drawing.Size(502, 124);
-            this.lstDepartures.TabIndex = 3;
-            // 
-            // lstLocal
-            // 
-            this.lstLocal.FormattingEnabled = true;
-            this.lstLocal.ItemHeight = 15;
-            this.lstLocal.Location = new System.Drawing.Point(782, 338);
-            this.lstLocal.Name = "lstLocal";
-            this.lstLocal.Size = new System.Drawing.Size(356, 259);
-            this.lstLocal.TabIndex = 4;
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 15;
+            this.listBox3.Location = new System.Drawing.Point(732, 261);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(255, 184);
+            this.listBox3.TabIndex = 2;
             // 
             // frmTrafficLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1275, 634);
-            this.Controls.Add(this.lstLocal);
-            this.Controls.Add(this.lstDepartures);
-            this.Controls.Add(this.lstOnStation);
-            this.Controls.Add(this.lstArrivals);
-            this.Controls.Add(this.lstPPR);
+            this.ClientSize = new System.Drawing.Size(1076, 592);
+            this.Controls.Add(this.listBox3);
+            this.Controls.Add(this.listBox2);
+            this.Controls.Add(this.listBox1);
             this.Name = "frmTrafficLog";
-            this.Text = "Traffic Log";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Text = "frmTrafficLog";
+            this.Load += new System.EventHandler(this.frmTrafficLog_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ListBox lstPPR;
-        private ListBox lstArrivals;
-        private ListBox lstOnStation;
-        private ListBox lstDepartures;
-        private ListBox lstLocal;
+        private ListBox listBox1;
+        private ListBox listBox2;
+        private ListBox listBox3;
     }
 }
