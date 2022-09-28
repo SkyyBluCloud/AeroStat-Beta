@@ -27,7 +27,7 @@ namespace AeroStat_Beta
         public string flightRule { get; set; }
         public string depPoint { get; set; }
         public string destination { get; set; }        
-        public string fpType { get; set; }
+        public long fpType { get; set; }
         public DateOnly dof { get; set; }
         public TimeOnly etd { get; set; }
         public TimeOnly ete { get; set; }

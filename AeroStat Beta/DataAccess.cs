@@ -27,5 +27,17 @@ namespace AeroStat_Beta
                 return output;
             }
         }
+
+        public static DataTable getDataTable(String table)
+        {
+            using (SqlConnection conn = new SqlConnection(SQLHelper.cnnVal("testAeroStat")))
+            {
+                string select = $"SELECT * FROM { table }";
+                SqlDataAdapter da = new SqlDataAdapter(select, conn);
+                DataTable output = new DataTable();
+                da.Fill(output);
+                return output;
+            }
+        }
     }
 }

@@ -5,7 +5,7 @@ namespace AeroStat_Beta
         public long id { get; set; }
         public long spID { get; set; }
         public string opInitials { get; set; }
-        public string username { get; set; }
+        public string? username { get; set; }
         public string lastName { get; set; }
         public string firstName { get; set; }
         public string fullName3616
@@ -24,11 +24,11 @@ namespace AeroStat_Beta
                 return output;
             }
         }
-        public string unit { get; set; }
+        public string? unit { get; set; }
         public long rankID { get; set; }
         public bool approved { get; set; }
         public DateTime lastLogin { get; set; }
-        public string lastSystem { get; set; }
+        public string? lastSystem { get; set; }
         public long lastShift { get; set; }
         public bool onShift { get; set; }
         public bool isLoggedIn { get; set; }
