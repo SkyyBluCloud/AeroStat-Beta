@@ -45,5 +45,15 @@ namespace AeroStat_Beta
             };
             frmPPREntry.Show();
         }
+
+        private void mbTraffic_Click(object sender, EventArgs e)
+        {
+            TrafficLogForm frmTrafficLog = new()
+            {
+                MdiParent = this,
+                StartPosition = FormStartPosition.CenterScreen
+            };
+            frmTrafficLog.Show();
+        }
     }
 }

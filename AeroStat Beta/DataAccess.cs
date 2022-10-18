@@ -1,16 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Dapper;
 
 namespace AeroStat_Beta
 {
     public class DataAccess
     {
+        public List<PPRService> getPPRServices ()
+        {
+            using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal("testAeroStat")))
+            {
+                var output = connection.Query<PPRService>("SELECT * FROM tblPPRServices;");
+                return output.ToList();
+            }
+        }
         public List<Traffic> getFlights (string dir, bool hasPPR)
         {
             using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal("testAeroStat")))

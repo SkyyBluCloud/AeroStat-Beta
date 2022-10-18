@@ -137,19 +137,18 @@
             // mxpServices
             // 
             this.mxpServices.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.mxpServices.Collapse = true;
             this.mxpServices.Controls.Add(this.mlbServices);
             this.mxpServices.Depth = 0;
             this.mxpServices.Description = "";
-            this.mxpServices.ExpandHeight = 313;
+            this.mxpServices.ExpandHeight = 286;
             this.mxpServices.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mxpServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mxpServices.Location = new System.Drawing.Point(19, 282);
-            this.mxpServices.Margin = new System.Windows.Forms.Padding(16, 1, 16, 0);
+            this.mxpServices.Margin = new System.Windows.Forms.Padding(16);
             this.mxpServices.MouseState = MaterialSkin.MouseState.HOVER;
             this.mxpServices.Name = "mxpServices";
             this.mxpServices.Padding = new System.Windows.Forms.Padding(24, 64, 24, 16);
-            this.mxpServices.Size = new System.Drawing.Size(369, 48);
+            this.mxpServices.Size = new System.Drawing.Size(369, 286);
             this.mxpServices.TabIndex = 11;
             this.mxpServices.Title = "Services";
             // 
@@ -547,6 +546,8 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(752, 574);
+            this.Controls.Add(this.mxpPOCInfo);
+            this.Controls.Add(this.mxpServices);
             this.Controls.Add(this.materialListView2);
             this.Controls.Add(this.mxpPPR);
             this.Controls.Add(this.mtbDVCode);
@@ -560,8 +561,6 @@
             this.Controls.Add(this.mtbTail);
             this.Controls.Add(this.mtbType);
             this.Controls.Add(this.mtbCallsign);
-            this.Controls.Add(this.mxpServices);
-            this.Controls.Add(this.mxpPOCInfo);
             this.Controls.Add(this.materialDivider1);
             this.Controls.Add(this.mbSave);
             this.Controls.Add(this.mbCancel);
@@ -573,7 +572,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PPR Request";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.PPREntryForm_Load);
             this.mxpPOCInfo.ResumeLayout(false);
             this.mxpPOCInfo.PerformLayout();
             this.mxpServices.ResumeLayout(false);
