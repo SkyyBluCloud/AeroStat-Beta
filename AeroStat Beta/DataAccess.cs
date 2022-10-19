@@ -1,16 +1,35 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
+using System.Linq.Expressions;
 using Dapper;
 
 namespace AeroStat_Beta
 {
     public class DataAccess
     {
+        public PPR getPPR(string pprNumber)
+        {
+            using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal("testAeroStat")))
+            {
+
+                var output = connection.QueryFirst<PPR>("dbo.getPPR @ppr", pprNumber);
+                return output;
+
+            }
+        }
+        public List<PPR> getPPRs()
+        {
+            using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal("testAeroStat")))
+            {
+                var output = connection.Query<PPR>("dbo.getPPRs");
+                return output.ToList();
+            }
+        }
         public List<PPRService> getPPRServices ()
         {
             using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal("testAeroStat")))
             {
-                var output = connection.Query<PPRService>("SELECT * FROM tblPPRServices;");
+                var output = connection.Query<PPRService>("dbo.getPPRServices");
                 return output.ToList();
             }
         }

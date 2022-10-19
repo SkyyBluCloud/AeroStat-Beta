@@ -38,7 +38,7 @@ namespace AeroStat_Beta
 
         private void pPRToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PPREntryForm frmPPREntry = new()
+            PPREntryForm frmPPREntry = new(null)
             {
                 //MdiParent = this,
                 StartPosition = FormStartPosition.CenterScreen

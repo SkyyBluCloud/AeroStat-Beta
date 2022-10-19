@@ -25,10 +25,10 @@ namespace AeroStat_Beta
             skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
 
-            updateBinding();
+            updateBindings();
         }
 
-        private void updateBinding()
+        private void updateBindings()
         {
             DataAccess da = new DataAccess();
 

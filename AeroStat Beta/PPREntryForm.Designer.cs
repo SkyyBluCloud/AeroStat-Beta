@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            MaterialSkin.MaterialListBoxItem materialListBoxItem2 = new MaterialSkin.MaterialListBoxItem();
             this.mxpPOCInfo = new MaterialSkin.Controls.MaterialExpansionPanel();
-            this.materialTextBox11 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox10 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox9 = new MaterialSkin.Controls.MaterialTextBox();
+            this.mtbContactInfo = new MaterialSkin.Controls.MaterialTextBox();
+            this.mtbUnit = new MaterialSkin.Controls.MaterialTextBox();
+            this.mtbPOCName = new MaterialSkin.Controls.MaterialTextBox();
             this.mxpServices = new MaterialSkin.Controls.MaterialExpansionPanel();
             this.mlbServices = new MaterialSkin.Controls.MaterialListBox();
             this.mtbNumber = new MaterialSkin.Controls.MaterialTextBox();
@@ -49,10 +50,10 @@
             this.mbCancel = new MaterialSkin.Controls.MaterialButton();
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.mxpPPR = new MaterialSkin.Controls.MaterialExpansionPanel();
-            this.materialTextBox14 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialTextBox12 = new MaterialSkin.Controls.MaterialTextBox();
+            this.mtbMSN = new MaterialSkin.Controls.MaterialTextBox();
+            this.mrbManualPPR = new MaterialSkin.Controls.MaterialRadioButton();
+            this.mrbAutoPPR = new MaterialSkin.Controls.MaterialRadioButton();
+            this.mtbPPR = new MaterialSkin.Controls.MaterialTextBox();
             this.materialListView2 = new MaterialSkin.Controls.MaterialListView();
             this.mxpPOCInfo.SuspendLayout();
             this.mxpServices.SuspendLayout();
@@ -61,14 +62,16 @@
             // 
             // mxpPOCInfo
             // 
+            this.mxpPOCInfo.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.mxpPOCInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mxpPOCInfo.CancelButtonText = "";
             this.mxpPOCInfo.Collapse = true;
-            this.mxpPOCInfo.Controls.Add(this.materialTextBox11);
-            this.mxpPOCInfo.Controls.Add(this.materialTextBox10);
-            this.mxpPOCInfo.Controls.Add(this.materialTextBox9);
+            this.mxpPOCInfo.Controls.Add(this.mtbContactInfo);
+            this.mxpPOCInfo.Controls.Add(this.mtbUnit);
+            this.mxpPOCInfo.Controls.Add(this.mtbPOCName);
             this.mxpPOCInfo.Depth = 0;
             this.mxpPOCInfo.Description = "";
-            this.mxpPOCInfo.ExpandHeight = 315;
+            this.mxpPOCInfo.ExpandHeight = 286;
             this.mxpPOCInfo.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mxpPOCInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mxpPOCInfo.Location = new System.Drawing.Point(394, 282);
@@ -79,64 +82,68 @@
             this.mxpPOCInfo.Size = new System.Drawing.Size(339, 48);
             this.mxpPOCInfo.TabIndex = 10;
             this.mxpPOCInfo.Title = "POC Information";
+            this.mxpPOCInfo.ValidationButtonEnable = true;
+            this.mxpPOCInfo.ValidationButtonText = "Apply";
             // 
-            // materialTextBox11
+            // mtbContactInfo
             // 
-            this.materialTextBox11.AnimateReadOnly = false;
-            this.materialTextBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox11.Depth = 0;
-            this.materialTextBox11.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox11.Hint = "Contact Info";
-            this.materialTextBox11.LeadingIcon = null;
-            this.materialTextBox11.Location = new System.Drawing.Point(27, 179);
-            this.materialTextBox11.MaxLength = 50;
-            this.materialTextBox11.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox11.Multiline = false;
-            this.materialTextBox11.Name = "materialTextBox11";
-            this.materialTextBox11.Size = new System.Drawing.Size(206, 50);
-            this.materialTextBox11.TabIndex = 4;
-            this.materialTextBox11.Text = "";
-            this.materialTextBox11.TrailingIcon = null;
+            this.mtbContactInfo.AnimateReadOnly = false;
+            this.mtbContactInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbContactInfo.Depth = 0;
+            this.mtbContactInfo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.mtbContactInfo.Hint = "Contact Info";
+            this.mtbContactInfo.LeadingIcon = null;
+            this.mtbContactInfo.Location = new System.Drawing.Point(27, 163);
+            this.mtbContactInfo.MaxLength = 50;
+            this.mtbContactInfo.MouseState = MaterialSkin.MouseState.OUT;
+            this.mtbContactInfo.Multiline = false;
+            this.mtbContactInfo.Name = "mtbContactInfo";
+            this.mtbContactInfo.Size = new System.Drawing.Size(206, 50);
+            this.mtbContactInfo.TabIndex = 4;
+            this.mtbContactInfo.Text = "";
+            this.mtbContactInfo.TrailingIcon = null;
             // 
-            // materialTextBox10
+            // mtbUnit
             // 
-            this.materialTextBox10.AnimateReadOnly = false;
-            this.materialTextBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox10.Depth = 0;
-            this.materialTextBox10.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox10.Hint = "Unit";
-            this.materialTextBox10.LeadingIcon = null;
-            this.materialTextBox10.Location = new System.Drawing.Point(27, 123);
-            this.materialTextBox10.MaxLength = 50;
-            this.materialTextBox10.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox10.Multiline = false;
-            this.materialTextBox10.Name = "materialTextBox10";
-            this.materialTextBox10.Size = new System.Drawing.Size(206, 50);
-            this.materialTextBox10.TabIndex = 3;
-            this.materialTextBox10.Text = "";
-            this.materialTextBox10.TrailingIcon = null;
+            this.mtbUnit.AnimateReadOnly = false;
+            this.mtbUnit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbUnit.Depth = 0;
+            this.mtbUnit.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.mtbUnit.Hint = "Unit";
+            this.mtbUnit.LeadingIcon = null;
+            this.mtbUnit.Location = new System.Drawing.Point(27, 107);
+            this.mtbUnit.MaxLength = 50;
+            this.mtbUnit.MouseState = MaterialSkin.MouseState.OUT;
+            this.mtbUnit.Multiline = false;
+            this.mtbUnit.Name = "mtbUnit";
+            this.mtbUnit.Size = new System.Drawing.Size(206, 50);
+            this.mtbUnit.TabIndex = 3;
+            this.mtbUnit.Text = "";
+            this.mtbUnit.TrailingIcon = null;
             // 
-            // materialTextBox9
+            // mtbPOCName
             // 
-            this.materialTextBox9.AnimateReadOnly = false;
-            this.materialTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox9.Depth = 0;
-            this.materialTextBox9.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox9.Hint = "Name";
-            this.materialTextBox9.LeadingIcon = null;
-            this.materialTextBox9.Location = new System.Drawing.Point(27, 67);
-            this.materialTextBox9.MaxLength = 50;
-            this.materialTextBox9.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox9.Multiline = false;
-            this.materialTextBox9.Name = "materialTextBox9";
-            this.materialTextBox9.Size = new System.Drawing.Size(206, 50);
-            this.materialTextBox9.TabIndex = 2;
-            this.materialTextBox9.Text = "";
-            this.materialTextBox9.TrailingIcon = null;
+            this.mtbPOCName.AnimateReadOnly = false;
+            this.mtbPOCName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbPOCName.Depth = 0;
+            this.mtbPOCName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.mtbPOCName.Hint = "Name";
+            this.mtbPOCName.LeadingIcon = null;
+            this.mtbPOCName.Location = new System.Drawing.Point(27, 51);
+            this.mtbPOCName.MaxLength = 50;
+            this.mtbPOCName.MouseState = MaterialSkin.MouseState.OUT;
+            this.mtbPOCName.Multiline = false;
+            this.mtbPOCName.Name = "mtbPOCName";
+            this.mtbPOCName.Size = new System.Drawing.Size(206, 50);
+            this.mtbPOCName.TabIndex = 2;
+            this.mtbPOCName.Text = "";
+            this.mtbPOCName.TrailingIcon = null;
             // 
             // mxpServices
             // 
             this.mxpServices.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mxpServices.CancelButtonText = "";
+            this.mxpServices.Collapse = true;
             this.mxpServices.Controls.Add(this.mlbServices);
             this.mxpServices.Depth = 0;
             this.mxpServices.Description = "";
@@ -144,29 +151,36 @@
             this.mxpServices.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mxpServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mxpServices.Location = new System.Drawing.Point(19, 282);
-            this.mxpServices.Margin = new System.Windows.Forms.Padding(16);
+            this.mxpServices.Margin = new System.Windows.Forms.Padding(16, 1, 16, 0);
             this.mxpServices.MouseState = MaterialSkin.MouseState.HOVER;
             this.mxpServices.Name = "mxpServices";
             this.mxpServices.Padding = new System.Windows.Forms.Padding(24, 64, 24, 16);
-            this.mxpServices.Size = new System.Drawing.Size(369, 286);
+            this.mxpServices.Size = new System.Drawing.Size(369, 48);
             this.mxpServices.TabIndex = 11;
             this.mxpServices.Title = "Services";
+            this.mxpServices.ValidationButtonEnable = true;
+            this.mxpServices.ValidationButtonText = "Apply";
             // 
             // mlbServices
             // 
-            this.mlbServices.AllowDrop = true;
             this.mlbServices.BackColor = System.Drawing.Color.White;
             this.mlbServices.BorderColor = System.Drawing.Color.LightGray;
             this.mlbServices.Depth = 0;
             this.mlbServices.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mlbServices.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.mlbServices.Font = new System.Drawing.Font("Roboto", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            materialListBoxItem2.SecondaryText = "";
+            materialListBoxItem2.Tag = null;
+            materialListBoxItem2.Text = "ListBoxItem";
+            this.mlbServices.Items.Add(materialListBoxItem2);
             this.mlbServices.Location = new System.Drawing.Point(24, 64);
             this.mlbServices.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mlbServices.MultiSelect = true;
             this.mlbServices.Name = "mlbServices";
             this.mlbServices.SelectedIndex = -1;
             this.mlbServices.SelectedItem = null;
             this.mlbServices.Size = new System.Drawing.Size(321, 147);
             this.mlbServices.TabIndex = 2;
+            this.mlbServices.TabStop = false;
             // 
             // mtbNumber
             // 
@@ -384,14 +398,14 @@
             this.mbSave.Depth = 0;
             this.mbSave.HighEmphasis = true;
             this.mbSave.Icon = null;
-            this.mbSave.Location = new System.Drawing.Point(678, 363);
+            this.mbSave.Location = new System.Drawing.Point(661, 363);
             this.mbSave.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.mbSave.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbSave.Name = "mbSave";
             this.mbSave.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.mbSave.Size = new System.Drawing.Size(67, 36);
+            this.mbSave.Size = new System.Drawing.Size(84, 36);
             this.mbSave.TabIndex = 31;
-            this.mbSave.Text = "&Save";
+            this.mbSave.Text = "&Submit";
             this.mbSave.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.mbSave.UseAccentColor = false;
             this.mbSave.UseVisualStyleBackColor = true;
@@ -404,7 +418,7 @@
             this.mbCancel.Depth = 0;
             this.mbCancel.HighEmphasis = true;
             this.mbCancel.Icon = null;
-            this.mbCancel.Location = new System.Drawing.Point(583, 363);
+            this.mbCancel.Location = new System.Drawing.Point(566, 363);
             this.mbCancel.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.mbCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbCancel.Name = "mbCancel";
@@ -432,13 +446,14 @@
             // mxpPPR
             // 
             this.mxpPPR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mxpPPR.CancelButtonText = "";
             this.mxpPPR.Collapse = true;
-            this.mxpPPR.Controls.Add(this.materialTextBox14);
-            this.mxpPPR.Controls.Add(this.materialRadioButton2);
-            this.mxpPPR.Controls.Add(this.materialRadioButton1);
-            this.mxpPPR.Controls.Add(this.materialTextBox12);
+            this.mxpPPR.Controls.Add(this.mtbMSN);
+            this.mxpPPR.Controls.Add(this.mrbManualPPR);
+            this.mxpPPR.Controls.Add(this.mrbAutoPPR);
+            this.mxpPPR.Controls.Add(this.mtbPPR);
             this.mxpPPR.Depth = 0;
-            this.mxpPPR.ExpandHeight = 346;
+            this.mxpPPR.ExpandHeight = 334;
             this.mxpPPR.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mxpPPR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.mxpPPR.Location = new System.Drawing.Point(19, 65);
@@ -446,77 +461,79 @@
             this.mxpPPR.MouseState = MaterialSkin.MouseState.HOVER;
             this.mxpPPR.Name = "mxpPPR";
             this.mxpPPR.Padding = new System.Windows.Forms.Padding(24, 64, 24, 16);
-            this.mxpPPR.Size = new System.Drawing.Size(335, 48);
+            this.mxpPPR.Size = new System.Drawing.Size(369, 48);
             this.mxpPPR.TabIndex = 34;
             this.mxpPPR.Title = "PPR:";
+            this.mxpPPR.ValidationButtonEnable = true;
+            this.mxpPPR.ValidationButtonText = "Apply";
             // 
-            // materialTextBox14
+            // mtbMSN
             // 
-            this.materialTextBox14.AnimateReadOnly = false;
-            this.materialTextBox14.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox14.Depth = 0;
-            this.materialTextBox14.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox14.Hint = "MSN #";
-            this.materialTextBox14.LeadingIcon = null;
-            this.materialTextBox14.Location = new System.Drawing.Point(27, 141);
-            this.materialTextBox14.MaxLength = 50;
-            this.materialTextBox14.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox14.Multiline = false;
-            this.materialTextBox14.Name = "materialTextBox14";
-            this.materialTextBox14.Size = new System.Drawing.Size(236, 50);
-            this.materialTextBox14.TabIndex = 38;
-            this.materialTextBox14.Text = "";
-            this.materialTextBox14.TrailingIcon = null;
+            this.mtbMSN.AnimateReadOnly = false;
+            this.mtbMSN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbMSN.Depth = 0;
+            this.mtbMSN.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.mtbMSN.Hint = "MSN #";
+            this.mtbMSN.LeadingIcon = null;
+            this.mtbMSN.Location = new System.Drawing.Point(27, 123);
+            this.mtbMSN.MaxLength = 50;
+            this.mtbMSN.MouseState = MaterialSkin.MouseState.OUT;
+            this.mtbMSN.Multiline = false;
+            this.mtbMSN.Name = "mtbMSN";
+            this.mtbMSN.Size = new System.Drawing.Size(236, 50);
+            this.mtbMSN.TabIndex = 38;
+            this.mtbMSN.Text = "";
+            this.mtbMSN.TrailingIcon = null;
             // 
-            // materialRadioButton2
+            // mrbManualPPR
             // 
-            this.materialRadioButton2.AutoSize = true;
-            this.materialRadioButton2.Depth = 0;
-            this.materialRadioButton2.Location = new System.Drawing.Point(24, 101);
-            this.materialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton2.Name = "materialRadioButton2";
-            this.materialRadioButton2.Ripple = true;
-            this.materialRadioButton2.Size = new System.Drawing.Size(123, 37);
-            this.materialRadioButton2.TabIndex = 37;
-            this.materialRadioButton2.TabStop = true;
-            this.materialRadioButton2.Text = "Manual PPR";
-            this.materialRadioButton2.UseVisualStyleBackColor = true;
+            this.mrbManualPPR.AutoSize = true;
+            this.mrbManualPPR.Depth = 0;
+            this.mrbManualPPR.Location = new System.Drawing.Point(24, 228);
+            this.mrbManualPPR.Margin = new System.Windows.Forms.Padding(0);
+            this.mrbManualPPR.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mrbManualPPR.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mrbManualPPR.Name = "mrbManualPPR";
+            this.mrbManualPPR.Ripple = true;
+            this.mrbManualPPR.Size = new System.Drawing.Size(123, 37);
+            this.mrbManualPPR.TabIndex = 37;
+            this.mrbManualPPR.TabStop = true;
+            this.mrbManualPPR.Text = "Manual PPR";
+            this.mrbManualPPR.UseVisualStyleBackColor = true;
             // 
-            // materialRadioButton1
+            // mrbAutoPPR
             // 
-            this.materialRadioButton1.AutoSize = true;
-            this.materialRadioButton1.Depth = 0;
-            this.materialRadioButton1.Location = new System.Drawing.Point(24, 64);
-            this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton1.Name = "materialRadioButton1";
-            this.materialRadioButton1.Ripple = true;
-            this.materialRadioButton1.Size = new System.Drawing.Size(167, 37);
-            this.materialRadioButton1.TabIndex = 36;
-            this.materialRadioButton1.TabStop = true;
-            this.materialRadioButton1.Text = "Auto-generate PPR";
-            this.materialRadioButton1.UseVisualStyleBackColor = true;
+            this.mrbAutoPPR.AutoSize = true;
+            this.mrbAutoPPR.Depth = 0;
+            this.mrbAutoPPR.Location = new System.Drawing.Point(24, 191);
+            this.mrbAutoPPR.Margin = new System.Windows.Forms.Padding(0);
+            this.mrbAutoPPR.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mrbAutoPPR.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mrbAutoPPR.Name = "mrbAutoPPR";
+            this.mrbAutoPPR.Ripple = true;
+            this.mrbAutoPPR.Size = new System.Drawing.Size(167, 37);
+            this.mrbAutoPPR.TabIndex = 36;
+            this.mrbAutoPPR.TabStop = true;
+            this.mrbAutoPPR.Text = "Auto-generate PPR";
+            this.mrbAutoPPR.UseVisualStyleBackColor = true;
             // 
-            // materialTextBox12
+            // mtbPPR
             // 
-            this.materialTextBox12.AnimateReadOnly = false;
-            this.materialTextBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox12.Depth = 0;
-            this.materialTextBox12.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialTextBox12.Hint = "PPR #";
-            this.materialTextBox12.LeadingIcon = null;
-            this.materialTextBox12.Location = new System.Drawing.Point(27, 197);
-            this.materialTextBox12.MaxLength = 50;
-            this.materialTextBox12.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox12.Multiline = false;
-            this.materialTextBox12.Name = "materialTextBox12";
-            this.materialTextBox12.Size = new System.Drawing.Size(236, 50);
-            this.materialTextBox12.TabIndex = 35;
-            this.materialTextBox12.Text = "";
-            this.materialTextBox12.TrailingIcon = null;
+            this.mtbPPR.AnimateReadOnly = false;
+            this.mtbPPR.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbPPR.Depth = 0;
+            this.mtbPPR.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.mtbPPR.Hint = "PPR #";
+            this.mtbPPR.LeadingIcon = null;
+            this.mtbPPR.Location = new System.Drawing.Point(27, 67);
+            this.mtbPPR.MaxLength = 50;
+            this.mtbPPR.MouseState = MaterialSkin.MouseState.OUT;
+            this.mtbPPR.Multiline = false;
+            this.mtbPPR.Name = "mtbPPR";
+            this.mtbPPR.Size = new System.Drawing.Size(236, 50);
+            this.mtbPPR.TabIndex = 35;
+            this.mtbPPR.Text = "";
+            this.mtbPPR.TrailingIcon = null;
             // 
             // materialListView2
             // 
@@ -527,13 +544,13 @@
             this.materialListView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialListView2.Depth = 0;
             this.materialListView2.FullRowSelect = true;
-            this.materialListView2.Location = new System.Drawing.Point(6, 441);
+            this.materialListView2.Location = new System.Drawing.Point(6, 408);
             this.materialListView2.MinimumSize = new System.Drawing.Size(200, 100);
             this.materialListView2.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialListView2.MouseState = MaterialSkin.MouseState.OUT;
             this.materialListView2.Name = "materialListView2";
             this.materialListView2.OwnerDraw = true;
-            this.materialListView2.Size = new System.Drawing.Size(740, 127);
+            this.materialListView2.Size = new System.Drawing.Size(740, 160);
             this.materialListView2.TabIndex = 35;
             this.materialListView2.UseCompatibleStateImageBehavior = false;
             this.materialListView2.View = System.Windows.Forms.View.Details;
@@ -546,10 +563,10 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(752, 574);
+            this.Controls.Add(this.mxpPPR);
             this.Controls.Add(this.mxpPOCInfo);
             this.Controls.Add(this.mxpServices);
             this.Controls.Add(this.materialListView2);
-            this.Controls.Add(this.mxpPPR);
             this.Controls.Add(this.mtbDVCode);
             this.Controls.Add(this.mcbSpot);
             this.Controls.Add(this.mtbFuel);
@@ -585,9 +602,9 @@
 
         #endregion
         private MaterialSkin.Controls.MaterialExpansionPanel mxpPOCInfo;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox11;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox10;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox9;
+        private MaterialSkin.Controls.MaterialTextBox mtbContactInfo;
+        private MaterialSkin.Controls.MaterialTextBox mtbUnit;
+        private MaterialSkin.Controls.MaterialTextBox mtbPOCName;
         private MaterialSkin.Controls.MaterialExpansionPanel mxpServices;
         private MaterialSkin.Controls.MaterialTextBox mtbNumber;
         private MaterialSkin.Controls.MaterialTextBox mtbDepDate;
@@ -605,10 +622,10 @@
         private MaterialSkin.Controls.MaterialButton mbCancel;
         private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private MaterialSkin.Controls.MaterialExpansionPanel mxpPPR;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox14;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton2;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox12;
+        private MaterialSkin.Controls.MaterialTextBox mtbMSN;
+        private MaterialSkin.Controls.MaterialRadioButton mrbManualPPR;
+        private MaterialSkin.Controls.MaterialRadioButton mrbAutoPPR;
+        private MaterialSkin.Controls.MaterialTextBox mtbPPR;
         private MaterialSkin.Controls.MaterialListView materialListView2;
     }
 }
