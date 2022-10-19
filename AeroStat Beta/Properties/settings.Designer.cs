@@ -88,7 +88,7 @@ namespace AeroStat_Beta.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
         public int globalSyncLength {
             get {
                 return ((int)(this["globalSyncLength"]));
@@ -119,6 +119,17 @@ namespace AeroStat_Beta.Properties {
         public bool pprCUI {
             get {
                 return ((bool)(this["pprCUI"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=localhost\\SQLEXPRESS;Database=testAeroStat;User=AeroStat;Pwd=aerostat;Trus" +
+            "ted_Connection=True;")]
+        public string testAeroStat {
+            get {
+                return ((string)(this["testAeroStat"]));
             }
         }
     }

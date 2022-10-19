@@ -9,7 +9,7 @@ namespace AeroStat_Beta
     {
         public PPR getPPR(string pprNumber)
         {
-            using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal("testAeroStat")))
+            using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal()))
             {
 
                 var output = connection.QueryFirst<PPR>("dbo.getPPR @ppr", pprNumber);
@@ -19,7 +19,7 @@ namespace AeroStat_Beta
         }
         public List<PPR> getPPRs()
         {
-            using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal("testAeroStat")))
+            using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal()))
             {
                 var output = connection.Query<PPR>("dbo.getPPRs");
                 return output.ToList();
@@ -27,7 +27,7 @@ namespace AeroStat_Beta
         }
         public List<PPRService> getPPRServices ()
         {
-            using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal("testAeroStat")))
+            using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal()))
             {
                 var output = connection.Query<PPRService>("dbo.getPPRServices");
                 return output.ToList();
@@ -35,7 +35,7 @@ namespace AeroStat_Beta
         }
         public List<Traffic> getFlights (string dir, bool hasPPR)
         {
-            using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal("testAeroStat")))
+            using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal()))
             {
                 //SELECT ID, flightRule, Callsign, 
                 var output = connection.Query<Traffic>($"SELECT * FROM tblTraffic WHERE direction = '{ dir }' AND (PPR Is Not Null) = { hasPPR }").ToList();
@@ -44,7 +44,7 @@ namespace AeroStat_Beta
         }
         public List<User> getUsers()
         {
-            using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal("testAeroStat")))
+            using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal()))
             {
                 var output = connection.Query<User>($"SELECT * FROM tblUserAuth;").ToList();
                 return output;
@@ -53,7 +53,7 @@ namespace AeroStat_Beta
 
         public static DataTable getDataTable(String table)
         {
-            using (SqlConnection conn = new SqlConnection(SQLHelper.cnnVal("testAeroStat")))
+            using (SqlConnection conn = new SqlConnection(SQLHelper.cnnVal()))
             {
                 string select = $"SELECT * FROM { table }";
                 SqlDataAdapter da = new SqlDataAdapter(select, conn);
