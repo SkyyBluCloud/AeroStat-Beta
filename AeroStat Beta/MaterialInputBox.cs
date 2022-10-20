@@ -25,9 +25,14 @@ namespace AeroStat_Beta
 
         private void mbOK_Click(object sender, EventArgs e)
         {
-            result = mtbInput.Text;
+            result = mtbInput.Text.ToUpper() ;
             this.DialogResult = DialogResult.OK;
             this.Visible = false;
+        }
+
+        private void MaterialInputBox_Shown(object sender, EventArgs e)
+        {
+            mtbInput.Focus();
         }
     }
 }

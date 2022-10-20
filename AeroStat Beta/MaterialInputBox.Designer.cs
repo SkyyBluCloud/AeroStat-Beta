@@ -42,7 +42,7 @@
             this.mbOK.Depth = 0;
             this.mbOK.HighEmphasis = true;
             this.mbOK.Icon = null;
-            this.mbOK.Location = new System.Drawing.Point(283, 242);
+            this.mbOK.Location = new System.Drawing.Point(283, 228);
             this.mbOK.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.mbOK.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbOK.Name = "mbOK";
@@ -63,7 +63,7 @@
             this.mbCancel.Depth = 0;
             this.mbCancel.HighEmphasis = true;
             this.mbCancel.Icon = null;
-            this.mbCancel.Location = new System.Drawing.Point(198, 242);
+            this.mbCancel.Location = new System.Drawing.Point(198, 228);
             this.mbCancel.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.mbCancel.MouseState = MaterialSkin.MouseState.HOVER;
             this.mbCancel.Name = "mbCancel";
@@ -82,11 +82,13 @@
             this.mLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.mLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mLabel.Location = new System.Drawing.Point(3, 64);
+            this.mLabel.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.mLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.mLabel.Name = "mLabel";
-            this.mLabel.Size = new System.Drawing.Size(348, 113);
+            this.mLabel.Size = new System.Drawing.Size(348, 105);
             this.mLabel.TabIndex = 2;
             this.mLabel.Text = "materialLabel1";
+            this.mLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // mtbInput
             // 
@@ -96,7 +98,7 @@
             this.mtbInput.Dock = System.Windows.Forms.DockStyle.Left;
             this.mtbInput.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtbInput.LeadingIcon = null;
-            this.mtbInput.Location = new System.Drawing.Point(3, 177);
+            this.mtbInput.Location = new System.Drawing.Point(3, 169);
             this.mtbInput.MaxLength = 50;
             this.mtbInput.MouseState = MaterialSkin.MouseState.OUT;
             this.mtbInput.Multiline = false;
@@ -125,6 +127,7 @@
             this.Sizable = false;
             this.Text = "MaterialInputBox";
             this.TopMost = true;
+            this.Shown += new System.EventHandler(this.MaterialInputBox_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

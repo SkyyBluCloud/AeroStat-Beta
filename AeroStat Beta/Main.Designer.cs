@@ -30,7 +30,6 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trafficToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pPRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,23 +55,15 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trafficToolStripMenuItem,
             this.pPRToolStripMenuItem});
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.openToolStripMenuItem.Text = "Open";
             // 
-            // trafficToolStripMenuItem
-            // 
-            this.trafficToolStripMenuItem.Name = "trafficToolStripMenuItem";
-            this.trafficToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
-            this.trafficToolStripMenuItem.Text = "Traffic";
-            this.trafficToolStripMenuItem.Click += new System.EventHandler(this.trafficToolStripMenuItem_Click);
-            // 
             // pPRToolStripMenuItem
             // 
             this.pPRToolStripMenuItem.Name = "pPRToolStripMenuItem";
-            this.pPRToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.pPRToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pPRToolStripMenuItem.Text = "PPR";
             this.pPRToolStripMenuItem.Click += new System.EventHandler(this.pPRToolStripMenuItem_Click);
             // 
@@ -188,7 +179,6 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem openToolStripMenuItem;
-        private ToolStripMenuItem trafficToolStripMenuItem;
         private ToolStripMenuItem settingsToolStripMenuItem;
         private ToolStripMenuItem usersToolStripMenuItem;
         private ToolStripMenuItem pPRToolStripMenuItem;
