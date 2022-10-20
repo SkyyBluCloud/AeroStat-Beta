@@ -1,9 +1,7 @@
 ﻿using AeroStat_Beta.Properties;
 using MaterialSkin;
 using MaterialSkin.Controls;
-using Microsoft.VisualBasic;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography;
+using System.Linq.Expressions;
 
 namespace AeroStat_Beta
 {
@@ -12,19 +10,32 @@ namespace AeroStat_Beta
         private readonly MaterialSkinManager skinManager;
         private List<PPRService> services = new();
 
-        public PPREntryForm(int? id)
+        
+        public PPREntryForm()
         {
             InitializeComponent();
             skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
+
+            bsPPR.DataSource = new PPR();
             
+            newRec = true;
 
-            newRec = id == null;
-
-            updateBindings();
-
-
+            mxpPPR.Description = "New PPR";
+            updatePPRServiceList();
         }
+        public PPREntryForm(string pprNumber)
+        {
+            InitializeComponent();
+            skinManager = MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
+
+            DataAccess da = new();
+            bsPPR.DataSource = da.pprExists(pprNumber) ? da.getPPR(pprNumber) : new PPR();
+            mxpPPR.Description = pprNumber;
+            updatePPRServiceList();
+        }
+        
         private bool qualityCheck()
         {
             bool fail = new();
@@ -39,17 +50,17 @@ namespace AeroStat_Beta
                             //Do lookup stuff
                             break;
 
-                        case string s when s is "mtbCallsign" or "mtbTail":
+                        case "mtbCallsign" or "mtbTail":
                             fail = mtbCallsign.TextLength == 0 && mtbTail.TextLength == 0;
                             break;
 
-                        case string s when s is "mtbType" or "mtbDepPoint" or "mtbArrDate" or "pocName" or "ctcInfo" or "pprNumber":
+                        case "mtbType" or "mtbDepPoint" or "mtbArrDate" or "pocName" or "ctcInfo" or "pprNumber":
                             fail = mtb.TextLength == 0;
                             break;
                         case "fuel":
                             fail = mtb.TextLength == 0;
                             break;
-                        case string s when s is "depPoint" or "destination":
+                        case "depPoint" or "destination":
                             fail = mtb.Text == settings.Default.station;
                             break;
                     }
@@ -58,7 +69,7 @@ namespace AeroStat_Beta
 
             return !fail;
         }
-        private void updateBindings()
+        private void updatePPRServiceList()
         {
             DataAccess dataAccess = new();
             services = dataAccess.getPPRServices();
@@ -78,6 +89,7 @@ namespace AeroStat_Beta
         }
 
     public bool newRec { get; set; }
+
     }
 }
 

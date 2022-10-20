@@ -2,10 +2,21 @@ namespace AeroStat_Beta
 {
     public class User
     {
-        public long id { get; set; }
-        public long spID { get; set; }
+        public User(string opInitials, string username, string lastName, string firstName, string unit, Rank rank, long? authLevel)
+        {
+            this.opInitials = opInitials;
+            this.username = username;
+            this.lastName = lastName;
+            this.firstName = firstName;
+            this.unit = unit;
+            this.rank = rank;
+            this.authLevel = authLevel ?? 99;
+        }
+
+        public Guid id { get; set; } = Guid.NewGuid();
+        public long? spID { get; set; }
         public string opInitials { get; set; }
-        public string? username { get; set; }
+        public string username { get; set; }
         public string lastName { get; set; }
         public string firstName { get; set; }
         public string fullName3616
@@ -25,7 +36,7 @@ namespace AeroStat_Beta
             }
         }
         public string? unit { get; set; }
-        public long rankID { get; set; }
+        public Rank rank { get; set; }
         public bool approved { get; set; }
         public DateTime lastLogin { get; set; }
         public string? lastSystem { get; set; }

@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            MaterialSkin.MaterialListBoxItem materialListBoxItem2 = new MaterialSkin.MaterialListBoxItem();
+            this.components = new System.ComponentModel.Container();
+            MaterialSkin.MaterialListBoxItem materialListBoxItem3 = new MaterialSkin.MaterialListBoxItem();
             this.mxpPOCInfo = new MaterialSkin.Controls.MaterialExpansionPanel();
             this.mtbContactInfo = new MaterialSkin.Controls.MaterialTextBox();
             this.mtbUnit = new MaterialSkin.Controls.MaterialTextBox();
@@ -36,6 +37,7 @@
             this.mxpServices = new MaterialSkin.Controls.MaterialExpansionPanel();
             this.mlbServices = new MaterialSkin.Controls.MaterialListBox();
             this.mtbNumber = new MaterialSkin.Controls.MaterialTextBox();
+            this.bsPPR = new System.Windows.Forms.BindingSource(this.components);
             this.mtbDepDate = new MaterialSkin.Controls.MaterialTextBox();
             this.mtbDestination = new MaterialSkin.Controls.MaterialTextBox();
             this.mtbArrDate = new MaterialSkin.Controls.MaterialTextBox();
@@ -57,6 +59,7 @@
             this.materialListView2 = new MaterialSkin.Controls.MaterialListView();
             this.mxpPOCInfo.SuspendLayout();
             this.mxpServices.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsPPR)).BeginInit();
             this.mxpPPR.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,6 +92,7 @@
             // 
             this.mtbContactInfo.AnimateReadOnly = false;
             this.mtbContactInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbContactInfo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsPPR, "ctcInfo", true));
             this.mtbContactInfo.Depth = 0;
             this.mtbContactInfo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtbContactInfo.Hint = "Contact Info";
@@ -107,6 +111,7 @@
             // 
             this.mtbUnit.AnimateReadOnly = false;
             this.mtbUnit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbUnit.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsPPR, "unit", true));
             this.mtbUnit.Depth = 0;
             this.mtbUnit.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtbUnit.Hint = "Unit";
@@ -125,6 +130,7 @@
             // 
             this.mtbPOCName.AnimateReadOnly = false;
             this.mtbPOCName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbPOCName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsPPR, "pocName", true));
             this.mtbPOCName.Depth = 0;
             this.mtbPOCName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtbPOCName.Hint = "Name";
@@ -168,10 +174,10 @@
             this.mlbServices.Depth = 0;
             this.mlbServices.Dock = System.Windows.Forms.DockStyle.Top;
             this.mlbServices.Font = new System.Drawing.Font("Roboto", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            materialListBoxItem2.SecondaryText = "";
-            materialListBoxItem2.Tag = null;
-            materialListBoxItem2.Text = "ListBoxItem";
-            this.mlbServices.Items.Add(materialListBoxItem2);
+            materialListBoxItem3.SecondaryText = "";
+            materialListBoxItem3.Tag = null;
+            materialListBoxItem3.Text = "ListBoxItem";
+            this.mlbServices.Items.Add(materialListBoxItem3);
             this.mlbServices.Location = new System.Drawing.Point(24, 64);
             this.mlbServices.MouseState = MaterialSkin.MouseState.HOVER;
             this.mlbServices.MultiSelect = true;
@@ -186,6 +192,7 @@
             // 
             this.mtbNumber.AnimateReadOnly = false;
             this.mtbNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsPPR, "number", true));
             this.mtbNumber.Depth = 0;
             this.mtbNumber.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtbNumber.Hint = "#";
@@ -200,10 +207,16 @@
             this.mtbNumber.Text = "";
             this.mtbNumber.TrailingIcon = null;
             // 
+            // bsPPR
+            // 
+            this.bsPPR.AllowNew = true;
+            this.bsPPR.DataSource = typeof(AeroStat_Beta.PPR);
+            // 
             // mtbDepDate
             // 
             this.mtbDepDate.AnimateReadOnly = false;
             this.mtbDepDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbDepDate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsPPR, "depDate", true));
             this.mtbDepDate.Depth = 0;
             this.mtbDepDate.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtbDepDate.Hint = "Departure Date";
@@ -222,6 +235,7 @@
             // 
             this.mtbDestination.AnimateReadOnly = false;
             this.mtbDestination.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbDestination.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsPPR, "destination", true));
             this.mtbDestination.Depth = 0;
             this.mtbDestination.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtbDestination.Hint = "To";
@@ -240,6 +254,7 @@
             // 
             this.mtbArrDate.AnimateReadOnly = false;
             this.mtbArrDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbArrDate.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsPPR, "arrDate", true));
             this.mtbArrDate.Depth = 0;
             this.mtbArrDate.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtbArrDate.Hint = "Arrival Date";
@@ -258,6 +273,7 @@
             // 
             this.mtbDepPoint.AnimateReadOnly = false;
             this.mtbDepPoint.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbDepPoint.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsPPR, "depPoint", true));
             this.mtbDepPoint.Depth = 0;
             this.mtbDepPoint.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtbDepPoint.Hint = "From";
@@ -276,6 +292,7 @@
             // 
             this.mtbTail.AnimateReadOnly = false;
             this.mtbTail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbTail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsPPR, "tail", true));
             this.mtbTail.Depth = 0;
             this.mtbTail.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtbTail.Hint = "Tail/Reg";
@@ -294,6 +311,7 @@
             // 
             this.mtbType.AnimateReadOnly = false;
             this.mtbType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbType.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsPPR, "type", true));
             this.mtbType.Depth = 0;
             this.mtbType.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtbType.Hint = "Type";
@@ -312,6 +330,7 @@
             // 
             this.mtbCallsign.AnimateReadOnly = false;
             this.mtbCallsign.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbCallsign.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsPPR, "callsign", true));
             this.mtbCallsign.Depth = 0;
             this.mtbCallsign.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtbCallsign.Hint = "Callsign";
@@ -330,6 +349,7 @@
             // 
             this.mtbFuel.AnimateReadOnly = false;
             this.mtbFuel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbFuel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsPPR, "fuel", true));
             this.mtbFuel.Depth = 0;
             this.mtbFuel.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtbFuel.Hint = "Fuel";
@@ -348,6 +368,7 @@
             // 
             this.mcbSpot.AutoResize = false;
             this.mcbSpot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mcbSpot.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsPPR, "spot", true));
             this.mcbSpot.Depth = 0;
             this.mcbSpot.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.mcbSpot.DropDownHeight = 174;
@@ -371,6 +392,7 @@
             // 
             this.mtbDVCode.AutoResize = false;
             this.mtbDVCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mtbDVCode.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsPPR, "dvCode", true));
             this.mtbDVCode.Depth = 0;
             this.mtbDVCode.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.mtbDVCode.DropDownHeight = 174;
@@ -471,6 +493,7 @@
             // 
             this.mtbMSN.AnimateReadOnly = false;
             this.mtbMSN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbMSN.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsPPR, "msn", true));
             this.mtbMSN.Depth = 0;
             this.mtbMSN.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtbMSN.Hint = "MSN #";
@@ -521,6 +544,7 @@
             // 
             this.mtbPPR.AnimateReadOnly = false;
             this.mtbPPR.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtbPPR.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bsPPR, "pprNumber", true));
             this.mtbPPR.Depth = 0;
             this.mtbPPR.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.mtbPPR.Hint = "PPR #";
@@ -593,6 +617,7 @@
             this.mxpPOCInfo.PerformLayout();
             this.mxpServices.ResumeLayout(false);
             this.mxpServices.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsPPR)).EndInit();
             this.mxpPPR.ResumeLayout(false);
             this.mxpPPR.PerformLayout();
             this.ResumeLayout(false);
@@ -627,5 +652,6 @@
         private MaterialSkin.Controls.MaterialRadioButton mrbAutoPPR;
         private MaterialSkin.Controls.MaterialTextBox mtbPPR;
         private MaterialSkin.Controls.MaterialListView materialListView2;
+        private BindingSource bsPPR;
     }
 }

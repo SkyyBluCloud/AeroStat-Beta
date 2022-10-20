@@ -27,7 +27,7 @@ namespace AeroStat_Beta
         }
         public long id { get; set; }
         public string sfcName { get; set; }
-        public ISurface.Status status { get; set; }
+        public Status status { get; set; }
         public DimUnit dimUnit { get; set; }
         public MassUnit massUnit { get; set; }
         public long? length { get; set; }

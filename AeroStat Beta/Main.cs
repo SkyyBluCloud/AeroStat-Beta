@@ -1,5 +1,6 @@
 using MaterialSkin;
 using MaterialSkin.Controls;
+using Microsoft.VisualBasic;
 
 namespace AeroStat_Beta
 {
@@ -38,12 +39,14 @@ namespace AeroStat_Beta
 
         private void pPRToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PPREntryForm frmPPREntry = new(null)
+            MaterialInputBox mib = new("Enter PPR number:");
+            
+            if (mib.ShowDialog(this) == DialogResult.OK)
             {
-                //MdiParent = this,
-                StartPosition = FormStartPosition.CenterScreen
-            };
-            frmPPREntry.Show();
+                PPREntryForm frmPPREntry = new(mib.result);
+                frmPPREntry.Show();
+            }
+            mib.Dispose();
         }
 
         private void mbTraffic_Click(object sender, EventArgs e)

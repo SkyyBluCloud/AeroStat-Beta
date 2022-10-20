@@ -7,15 +7,30 @@ namespace AeroStat_Beta
 {
     public class DataAccess
     {
+        public long getLastPPR(string initials)
+        {
+            using (IDbConnection conn = new SqlConnection(SQLHelper.cnnVal()))
+            {
+                var output = conn.QueryFirst<long>("dbo.getLastPPR @initials", initials);
+                return output;
+            }
+        }
+        public bool pprExists(string pprNumber)
+        {
+            using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal()))
+            {
+                var output = connection.ExecuteScalar<bool>("SELECT COUNT(1) FROM dbo.tblPPR WHERE pprNumber = @ppr", new { ppr = pprNumber });
+                return output;
+            }
+        }
         public PPR getPPR(string pprNumber)
         {
             using (IDbConnection connection = new SqlConnection(SQLHelper.cnnVal()))
             {
-
-                var output = connection.QueryFirst<PPR>("dbo.getPPR @ppr", pprNumber);
+                var output = connection.QueryFirst<PPR>("dbo.getPPR @ppr", new { ppr = pprNumber });
                 return output;
-
             }
+            
         }
         public List<PPR> getPPRs()
         {
