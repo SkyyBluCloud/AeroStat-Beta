@@ -17,5 +17,25 @@ namespace AeroStat_Beta
         {
             this.WindowState = FormWindowState.Maximized;
         }
+
+        private void mlvPPR_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mlvFlightOrder_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mlvStationed_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mlvLocalStereoRequest_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

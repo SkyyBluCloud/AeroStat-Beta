@@ -6,7 +6,7 @@ namespace AeroStat_Beta
 {
     public partial class MaterialInputBox : MaterialForm
     {
-        MaterialSkinManager skinManager;
+        private readonly MaterialSkinManager skinManager;
         public string result { get; set; } = "";
         public MaterialInputBox(string label)
         {
