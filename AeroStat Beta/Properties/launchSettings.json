@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AeroStat Beta": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false
+    }
+  }
+}
